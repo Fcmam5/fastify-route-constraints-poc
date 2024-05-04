@@ -2,7 +2,7 @@
 
 ## Description <!-- omit from toc -->
 
-A PoC for [nest#12567](https://github.com/nestjs/nest/pull/12567)
+A PoC for [nest#12567](https://github.com/nestjs/nest/pull/12567) and [nest#13536](https://github.com/nestjs/nest/pull/13536)
 
 - Example use case: https://stackoverflow.com/questions/77225518/using-subdomains-in-nestjs-with-fastify-adapter
 - GH Issue: https://github.com/nestjs/nest/issues/12496
@@ -28,7 +28,11 @@ pnpm i
 pnpm i /Users/fcmam5/lab/oss/nest/packages/platform-fastify
 ```
 
-Run server with `pnpm start:dev`
+Run server with:
+
+- `s:d`To start the application with the `enableVersioning()` (uses URI by [default](https://docs.nestjs.com/techniques/versioning#versioning)) (runs: [`src/main.with-default-versioning.ts`](./src/main.with-default-versioning.ts))
+- `s:v`To start the application with enabled versioning (uses HEADER for this example), runs: [`src/main.with-enabled-versioning.ts`](./src/main.with-enabled-versioning.ts)
+- `s:nv`To start the application with no versioning, runs [`src/main.with-noversioning.ts`](./src/main.with-noversioning.ts)
 
 <details>
   <summary>we see that the constraints are set correctly.</summary>

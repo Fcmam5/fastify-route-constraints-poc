@@ -5,7 +5,7 @@ import { RouteConfig, RouteConstraints } from '@nestjs/platform-fastify';
 export class AppController {
   // Using NestJS API versioning: https://docs.nestjs.com/techniques/versioning
   @Get('/greet')
-  @Version('v1')
+  @Version('1')
   @RouteConfig({ output: 'Hello world!' })
   greetV1(@Req() req) {
     return { msg: req.routeOptions.config.output, version: 'v1' };
